@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="boot-interface-api:war">
+    <output-path>$PROJECT_DIR$/boot-interface-api/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>boot-interface-api</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="boot-interface-api-0.0.1-SNAPSHOT.war">
+      <element id="artifact" artifact-name="boot-interface-api:war exploded" />
+    </root>
+  </artifact>
+</component>
