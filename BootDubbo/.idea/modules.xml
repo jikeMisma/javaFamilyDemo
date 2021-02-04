@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/boot-interface-api/boot-interface-api.iml" filepath="$PROJECT_DIR$/boot-interface-api/boot-interface-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/boot-meeting-service/boot-meeting-service.iml" filepath="$PROJECT_DIR$/boot-meeting-service/boot-meeting-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/boot-pay-sevice/boot-pay-sevice.iml" filepath="$PROJECT_DIR$/boot-pay-sevice/boot-pay-sevice.iml" />
       <module fileurl="file://$PROJECT_DIR$/boot-user-service/boot-user-service.iml" filepath="$PROJECT_DIR$/boot-user-service/boot-user-service.iml" />
     </modules>
   </component>

@@ -1,7 +1,9 @@
 package com.mzc.service.impl;
 
+import com.alibaba.dubbo.config.annotation.Reference;
 import com.mzc.mapper.UserMapper;
 import com.mzc.pojo.User;
+import com.mzc.service.PayService;
 import com.mzc.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -21,8 +23,17 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserMapper userMapper;
 
+    //负载均衡机制
+    @Reference(check = false,loadbalance = "roundRobin ")
+    private PayService payService;
+
     @Override
     public User findById(String id) {
-        return userMapper.findById(id);
+
+        //根据用户id查询用户余额，该服务在apy-service中
+        String account = payService.account(id);
+        User user = userMapper.findById(id);
+        user.setAccount(account);
+        return user;
     }
 }

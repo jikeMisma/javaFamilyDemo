@@ -8,12 +8,14 @@
         <outputRelativeToContentRoot value="true" />
         <module name="boot-interface-api" />
         <module name="boot-meeting-service" />
+        <module name="boot-pay-sevice" />
         <module name="boot-user-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="boot-interface-api" target="1.7" />
       <module name="boot-meeting-service" target="1.8" />
+      <module name="boot-pay-sevice" target="1.8" />
       <module name="boot-user-service" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -21,6 +23,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="boot-interface-api" options="" />
       <module name="boot-meeting-service" options="-parameters" />
+      <module name="boot-pay-sevice" options="-parameters" />
       <module name="boot-user-service" options="-parameters" />
     </option>
   </component>

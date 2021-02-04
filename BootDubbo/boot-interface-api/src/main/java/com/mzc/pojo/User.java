@@ -26,4 +26,6 @@ public class User implements Serializable {
 
     private Date createdate;
 
+    private String account;
+
 }
