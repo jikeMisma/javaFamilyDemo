@@ -1,7 +1,7 @@
 package com.mzc.BehavioralModel.StrategyPattern;
 
 /**
- * 第一锦囊，乔国老开后门
+ * 第一妙计，乔国老开后门
  *
  * @ProductName: Hundsun HEP
  * @ProjectName: design-pattern

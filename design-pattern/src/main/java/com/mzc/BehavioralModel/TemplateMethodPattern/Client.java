@@ -3,6 +3,7 @@ package com.mzc.BehavioralModel.TemplateMethodPattern;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.math.BigDecimal;
 
 /**
  * 场景类
@@ -20,6 +21,8 @@ import java.io.InputStreamReader;
  * Copyright © 2021 Hundsun Technologies Inc. All Rights Reserved
  **/
 public class Client {
+
+    private BigDecimal count;
     public static void main(String[] args) throws IOException {
         System.out.println("-------------H1型号悍马-------------");
         System.out.println("H1型号悍马是否需要喇叭声响？0-不需要   1-需要");
