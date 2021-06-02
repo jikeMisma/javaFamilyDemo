@@ -30,5 +30,6 @@ public class Client {
         //然后我们看看韩非子干了什么
         hanFeiZi.havaBreakfast();
         hanFeiZi.haveFun();
+
     }
 }
