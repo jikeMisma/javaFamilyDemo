@@ -1,0 +1,80 @@
+package com.mzc.CreativeModel.PrototypePattern;
+
+/**
+ * @author MaZhiCheng
+ * @date 2021/6/3 - 22:51
+ * @motto 腹有诗书气自华
+ * @博客地址 https://blog.csdn.net/mzc_love
+ */
+public class NewMail implements  Cloneable {
+    //收件人
+    private String receiver;
+
+    //邮件名称
+    private String subject;
+
+    //称谓
+    private String appellation;
+
+    //邮件内容
+    private String context;
+
+    //邮件尾部一般加上“XXX版权所有等信息”
+    private String  tail;
+    @Override
+    public NewMail clone(){
+        NewMail mail = null;
+        try {
+            mail = (NewMail)super.clone();
+        }catch (CloneNotSupportedException e){
+            e.printStackTrace();
+        }
+        return mail;
+    }
+
+    //构造函数
+    public NewMail(AdvTemplate advTemplate){
+        this.context = advTemplate.getAdvContext();
+        this.subject = advTemplate.getAdvSubject();
+    }
+
+    public String getReceiver() {
+        return receiver;
+    }
+
+    public void setReceiver(String receiver) {
+        this.receiver = receiver;
+    }
+
+    public String getSubject() {
+        return subject;
+    }
+
+    public void setSubject(String subject) {
+        this.subject = subject;
+    }
+
+    public String getAppellation() {
+        return appellation;
+    }
+
+    public void setAppellation(String appellation) {
+        this.appellation = appellation;
+    }
+
+    public String getContext() {
+        return context;
+    }
+
+    public void setContext(String context) {
+        this.context = context;
+    }
+
+    public String getTail() {
+        return tail;
+    }
+
+    public void setTail(String tail) {
+        this.tail = tail;
+    }
+}
