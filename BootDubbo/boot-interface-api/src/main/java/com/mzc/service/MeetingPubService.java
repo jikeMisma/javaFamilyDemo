@@ -13,6 +13,6 @@ public interface MeetingPubService {
 
     /**
      * 根据会议id查询会议信息
-     * */
+     */
     public MeetingPub findByPcode(String pcode);
 }

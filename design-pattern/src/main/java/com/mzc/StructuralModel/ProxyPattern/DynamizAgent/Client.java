@@ -34,9 +34,9 @@ public class Client {
         //获得类的class loader
         ClassLoader cl = player.getClass().getClassLoader();
         //动态产生一个代理者
-        IGamePlayer proxy = (IGamePlayer) Proxy.newProxyInstance(cl,new Class[]{IGamePlayer.class},handler);
+        IGamePlayer proxy = (IGamePlayer) Proxy.newProxyInstance(cl, new Class[]{IGamePlayer.class}, handler);
         //登录
-        proxy.login("zhangsan","password");
+        proxy.login("zhangsan", "password");
         //开始打怪
         proxy.killBoss();
         //升级

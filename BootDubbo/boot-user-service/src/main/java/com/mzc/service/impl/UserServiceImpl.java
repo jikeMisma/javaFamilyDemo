@@ -24,7 +24,7 @@ public class UserServiceImpl implements UserService {
     private UserMapper userMapper;
 
     //负载均衡机制
-    @Reference(check = false,loadbalance = "roundRobin ")
+    @Reference(check = false, loadbalance = "roundRobin ")
     private PayService payService;
 
     @Override

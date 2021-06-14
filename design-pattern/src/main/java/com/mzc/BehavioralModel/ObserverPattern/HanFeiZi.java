@@ -17,7 +17,7 @@ import java.util.ArrayList;
  * @Version: 1.0
  * Copyright © 2021 Hundsun Technologies Inc. All Rights Reserved
  **/
-public class HanFeiZi implements Observable,IHanFeiZi {
+public class HanFeiZi implements Observable, IHanFeiZi {
 
     //定义一个可变长数组，存放所有的观察者
     private ArrayList<Observer> observableList = new ArrayList<Observer>();
@@ -37,7 +37,7 @@ public class HanFeiZi implements Observable,IHanFeiZi {
     //通知所有观察者
     @Override
     public void notifyObservable(String context) {
-        for(Observer observer:observableList){
+        for (Observer observer : observableList) {
             observer.update(context);
         }
     }

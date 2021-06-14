@@ -38,11 +38,11 @@ public class HummerH1Model extends HummerModel {
         System.out.println("悍马H1的引擎声音是这样的...");
     }
 
-    protected boolean isAlarm(){
+    protected boolean isAlarm() {
         return this.alarmFlag;
     }
 
-    public void setAlarm(boolean isAlarm){
+    public void setAlarm(boolean isAlarm) {
         this.alarmFlag = isAlarm;
     }
 }

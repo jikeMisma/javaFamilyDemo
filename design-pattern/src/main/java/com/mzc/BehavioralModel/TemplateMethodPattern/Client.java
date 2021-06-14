@@ -23,12 +23,13 @@ import java.math.BigDecimal;
 public class Client {
 
     private BigDecimal count;
+
     public static void main(String[] args) throws IOException {
         System.out.println("-------------H1型号悍马-------------");
         System.out.println("H1型号悍马是否需要喇叭声响？0-不需要   1-需要");
         String type = (new BufferedReader(new InputStreamReader(System.in))).readLine();
         HummerModel h1 = new HummerH1Model();
-        if(type.equals("0")){
+        if (type.equals("0")) {
             ((HummerH1Model) h1).setAlarm(false);
         }
         h1.run();

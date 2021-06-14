@@ -19,6 +19,7 @@ public interface IHanFeiZi {
 
     //韩非子吃早饭
     public void havaBreakfast();
+
     //韩非子做娱乐活动
     public void haveFun();
 }

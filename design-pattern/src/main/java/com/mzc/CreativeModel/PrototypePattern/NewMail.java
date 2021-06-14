@@ -6,7 +6,7 @@ package com.mzc.CreativeModel.PrototypePattern;
  * @motto 腹有诗书气自华
  * @博客地址 https://blog.csdn.net/mzc_love
  */
-public class NewMail implements  Cloneable {
+public class NewMail implements Cloneable {
     //收件人
     private String receiver;
 
@@ -20,20 +20,21 @@ public class NewMail implements  Cloneable {
     private String context;
 
     //邮件尾部一般加上“XXX版权所有等信息”
-    private String  tail;
+    private String tail;
+
     @Override
-    public NewMail clone(){
+    public NewMail clone() {
         NewMail mail = null;
         try {
-            mail = (NewMail)super.clone();
-        }catch (CloneNotSupportedException e){
+            mail = (NewMail) super.clone();
+        } catch (CloneNotSupportedException e) {
             e.printStackTrace();
         }
         return mail;
     }
 
     //构造函数
-    public NewMail(AdvTemplate advTemplate){
+    public NewMail(AdvTemplate advTemplate) {
         this.context = advTemplate.getAdvContext();
         this.subject = advTemplate.getAdvSubject();
     }

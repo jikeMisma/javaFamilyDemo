@@ -33,7 +33,7 @@ public class HummerH2Model extends HummerModel {
     }
 
     //H2车型默认没有喇叭
-    protected boolean isAlarm(){
+    protected boolean isAlarm() {
         return false;
     }
 

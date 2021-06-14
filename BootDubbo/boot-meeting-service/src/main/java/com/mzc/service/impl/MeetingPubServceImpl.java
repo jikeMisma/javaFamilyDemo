@@ -36,7 +36,7 @@ public class MeetingPubServceImpl implements MeetingPubService {
         MeetingPub meetingPub = meetingMapper.findByPcode(pcode);
 
         //调用服务完成服务的消费
-        System.out.println("Uid====>:"+meetingPub.getUid());
+        System.out.println("Uid====>:" + meetingPub.getUid());
         User user = userService.findById(meetingPub.getUid());
         meetingPub.setUser(user);
 

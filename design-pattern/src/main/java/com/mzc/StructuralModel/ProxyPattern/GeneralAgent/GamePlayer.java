@@ -17,11 +17,13 @@ package com.mzc.StructuralModel.ProxyPattern.GeneralAgent;
  **/
 public class GamePlayer implements IGamePlayer {
 
-    private String  name = "";
+    private String name = "";
+
     //通过构造函数传递名称
-    public GamePlayer(String _name){
+    public GamePlayer(String _name) {
         this.name = _name;
     }
+
     @Override
     public void login(String user, String passward) {
         System.out.println("登录名为【" + user + "】的用户" + this.name + "登录成功！");

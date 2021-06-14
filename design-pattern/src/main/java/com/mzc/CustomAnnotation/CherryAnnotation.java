@@ -24,7 +24,9 @@ import java.lang.annotation.*;
 public @interface CherryAnnotation {
 
     String name();
+
     int age() default 18;
+
     int[] score();
 
 }

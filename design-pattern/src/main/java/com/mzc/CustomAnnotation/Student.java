@@ -21,9 +21,9 @@ import java.lang.annotation.Documented;
  **/
 public class Student {
 
-    @CherryAnnotation(name = "My test",age = 19,score = {90,98,88})
-    public void study(int times){
-        for(int i = 0; i < times; i++){
+    @CherryAnnotation(name = "My test", age = 19, score = {90, 98, 88})
+    public void study(int times) {
+        for (int i = 0; i < times; i++) {
             System.out.println("Good Good Study, Day Day Up!");
         }
     }

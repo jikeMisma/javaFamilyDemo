@@ -18,11 +18,11 @@ public class NewClient {
         //把模板定义出来，这个是从数据库获得
         NewMail mail = new NewMail(new AdvTemplate());
         mail.setTail("XXX银行版权所有！");
-        while (i < Max_COUNT){
+        while (i < Max_COUNT) {
             //以下是没封邮件不同的地方
             NewMail cloneMail = mail.clone();
-            cloneMail.setAppellation(getRandString(5)+" 先生(女士)");
-            cloneMail.setReceiver(getRandString(5)+"@"+getRandString(8)+".com");
+            cloneMail.setAppellation(getRandString(5) + " 先生(女士)");
+            cloneMail.setReceiver(getRandString(5) + "@" + getRandString(8) + ".com");
             //然后发送邮件
             sendMain(cloneMail);
             i++;
@@ -33,12 +33,13 @@ public class NewClient {
     private static void sendMain(NewMail mail) {
         System.out.println("标题：" + mail.getSubject() + "\t收件人：" + mail.getReceiver() + "\t...发送成功！");
     }
+
     //获得指定长度的随机字符串
     private static String getRandString(int maxLength) {
         String source = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
         StringBuffer sb = new StringBuffer();
         Random rand = new Random();
-        for(int i = 0;i < maxLength;i++){
+        for (int i = 0; i < maxLength; i++) {
             sb.append(source.charAt(rand.nextInt(source.length())));
         }
         return sb.toString();

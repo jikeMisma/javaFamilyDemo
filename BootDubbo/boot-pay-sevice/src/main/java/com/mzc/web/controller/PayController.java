@@ -26,8 +26,8 @@ public class PayController {
      * 根据用户id查询余额接口
      */
     @ResponseBody
-    @RequestMapping(value = "account/{uid}",method = RequestMethod.GET)
-    public  String account(@PathVariable("uid") String uid){
+    @RequestMapping(value = "account/{uid}", method = RequestMethod.GET)
+    public String account(@PathVariable("uid") String uid) {
         return payService.account(uid);
 
     }

@@ -22,13 +22,15 @@ public class MeetingPubController {
 
     @Autowired
     private MeetingPubService meetingPubService;
+
     /**
      * 根据会议code查询会议信息
+     *
      * @return
      */
     @ResponseBody
-    @RequestMapping(value = "{pcode}",method = RequestMethod.GET)
-    public MeetingPub findByPcod(@PathVariable("pcode") String pcode){
+    @RequestMapping(value = "{pcode}", method = RequestMethod.GET)
+    public MeetingPub findByPcod(@PathVariable("pcode") String pcode) {
 
         return meetingPubService.findByPcode(pcode);
 

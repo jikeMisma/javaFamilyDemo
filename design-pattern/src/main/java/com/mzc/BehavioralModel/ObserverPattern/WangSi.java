@@ -25,8 +25,8 @@ public class WangSi implements Observer {
         System.out.println("王斯：高兴死了...");
     }
 
-    private void Happy(String reportContext){
-        System.out.println("王斯：因为"+reportContext+"所以我高兴啊，哈哈哈！");
+    private void Happy(String reportContext) {
+        System.out.println("王斯：因为" + reportContext + "所以我高兴啊，哈哈哈！");
 
     }
 }

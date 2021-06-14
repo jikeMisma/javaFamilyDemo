@@ -24,8 +24,8 @@ public class LiuSi implements Observer {
         System.out.println("刘斯：哭死了...");
     }
 
-    private void cry(String reportContext){
-        System.out.println("刘斯：因为" + reportContext+"所以我难过啊！");
+    private void cry(String reportContext) {
+        System.out.println("刘斯：因为" + reportContext + "所以我难过啊！");
 
     }
 }

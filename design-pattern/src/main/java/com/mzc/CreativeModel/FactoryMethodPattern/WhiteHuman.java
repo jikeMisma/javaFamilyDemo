@@ -15,7 +15,7 @@ package com.mzc.CreativeModel.FactoryMethodPattern;
  * @Version: 1.0
  * Copyright © 2021 Hundsun Technologies Inc. All Rights Reserved
  **/
-public class WhiteHuman implements  Human {
+public class WhiteHuman implements Human {
     @Override
     public void getColor() {
         System.out.println("白色人种的皮肤颜色是白色的！");

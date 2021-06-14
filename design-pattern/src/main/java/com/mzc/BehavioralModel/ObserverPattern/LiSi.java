@@ -25,7 +25,7 @@ public class LiSi implements Observer {
         System.out.println("李斯：汇报完毕...");
     }
 
-    private void reportToQinShiHuang(String reportContext){
+    private void reportToQinShiHuang(String reportContext) {
         System.out.println("李斯：报告，秦老板！韩非子有活动了-->" + reportContext);
 
     }

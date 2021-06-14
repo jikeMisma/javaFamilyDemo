@@ -30,7 +30,7 @@ public class Client {
         SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//设置日期格式
         String date = df.format(new Date());// new Date()为获取当前系统时间，也可使用当前时间戳
         System.out.println("开始时间是" + date);
-        proxy.login("zhangsan","password");
+        proxy.login("zhangsan", "password");
         //开始打怪
         proxy.killBoss();
         //升级

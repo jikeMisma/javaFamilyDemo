@@ -24,10 +24,10 @@ public class Mail {
     private String context;
 
     //邮件尾部一般加上“XXX版权所有等信息”
-    private String  tail;
+    private String tail;
 
     //构造函数
-    public Mail(AdvTemplate advTemplate){
+    public Mail(AdvTemplate advTemplate) {
         this.context = advTemplate.getAdvContext();
         this.subject = advTemplate.getAdvSubject();
     }

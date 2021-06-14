@@ -17,16 +17,18 @@ package com.mzc.CreativeModel.SingletonPattern;
  **/
 public class Emperor {
     private static final Emperor empertir = new Emperor();
+
     //单例模式的无参构造必须为private，约束外界不能通过new的方式创建对象，保持单例的特性
-    private Emperor(){
+    private Emperor() {
 
     }
-    public static Emperor getInstance(){
+
+    public static Emperor getInstance() {
         return empertir;
     }
 
     //皇帝发话了
-    public static void say(){
+    public static void say() {
         System.out.println("我是皇帝某某某...");
     }
 }

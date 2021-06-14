@@ -6,44 +6,44 @@
 <mapper namespace="com.mzc.mapper.UserMapper">
 
     <!--<resultMap id="userMap" type="com.mzc.entry.User">-->
-        <!--<id property="id" column="id"></id>-->
-        <!--<result property="username" column="username"></result>-->
-        <!--<result property="address" column="address"></result>-->
-        <!--<result property="sex" column="sex"></result>-->
-        <!--<result property="birthday" column="birthday"></result>-->
+    <!--<id property="id" column="id"></id>-->
+    <!--<result property="username" column="username"></result>-->
+    <!--<result property="address" column="address"></result>-->
+    <!--<result property="sex" column="sex"></result>-->
+    <!--<result property="birthday" column="birthday"></result>-->
 
     <!--</resultMap>-->
 
 
     <!--配置查询所有-->
     <select id="findById" resultType="com.mzc.pojo.User">
-        select * from  user
+        select * from user
         where id = #{id};
     </select>
 
     <!--&lt;!&ndash;根据id查询用户信息&ndash;&gt;-->
     <!--<select id="findById" resultType="com.mzc.entry.User">-->
-        <!--select  * from user-->
-        <!--where id = #{id}-->
+    <!--select  * from user-->
+    <!--where id = #{id}-->
     <!--</select>-->
 
     <!--<insert id="saveUser" parameterType="com.mzc.entry.User">-->
-        <!--insert into user(username,birthday,sex,address)values(#{username},#{birthday},#{sex},#{address});-->
+    <!--insert into user(username,birthday,sex,address)values(#{username},#{birthday},#{sex},#{address});-->
     <!--</insert>-->
 
     <!--&lt;!&ndash;根据条件查询&ndash;&gt;-->
     <!--<select id="findBycondition"  parameterType="com.mzc.entry.User" resultMap="userMap">-->
-        <!--select *  from user-->
-        <!--<where>-->
-            <!--1 = 1-->
-            <!--<if test="username != null">-->
-                <!--and username = #{username}-->
-            <!--</if>-->
-            <!--<if test="sex != null">-->
-                <!--and sex = #{sex}-->
-            <!--</if>-->
+    <!--select *  from user-->
+    <!--<where>-->
+    <!--1 = 1-->
+    <!--<if test="username != null">-->
+    <!--and username = #{username}-->
+    <!--</if>-->
+    <!--<if test="sex != null">-->
+    <!--and sex = #{sex}-->
+    <!--</if>-->
 
-        <!--</where>-->
+    <!--</where>-->
 
     <!--</select>-->
 </mapper>

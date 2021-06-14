@@ -24,8 +24,8 @@ public class UserController {
     //根据用户id查询用户信息
 
     @ResponseBody
-    @RequestMapping(value = "{id}",method = RequestMethod.GET)
-    public User findBuId(@PathVariable("id")  String  id){
+    @RequestMapping(value = "{id}", method = RequestMethod.GET)
+    public User findBuId(@PathVariable("id") String id) {
         return userService.findById(id);
     }
 }

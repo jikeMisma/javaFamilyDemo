@@ -18,7 +18,7 @@ public class MettingPub implements Serializable {
     private String id;
 
     /*会议编号*/
-    private  String pcode;
+    private String pcode;
 
     /*会议标题*/
     private String title;
@@ -27,6 +27,6 @@ public class MettingPub implements Serializable {
     private String content;
 
     /*发布人员，在用户信息服务中*/
-    private  String Uid;
+    private String Uid;
     private User user;
 }

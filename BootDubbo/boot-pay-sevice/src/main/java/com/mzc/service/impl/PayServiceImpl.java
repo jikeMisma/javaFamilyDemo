@@ -23,6 +23,6 @@ public class PayServiceImpl implements PayService {
 
     @Override
     public String account(String uid) {
-        return uid+"账户余额为:"+payAccountMapper.findAccountById(uid)+"元";
+        return uid + "账户余额为:" + payAccountMapper.findAccountById(uid) + "元";
     }
 }

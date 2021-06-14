@@ -30,6 +30,6 @@ public class HumanFactory extends AbstractHumanFactory {
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         }
-        return (T)human;
+        return (T) human;
     }
 }

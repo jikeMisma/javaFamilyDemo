@@ -19,11 +19,13 @@ public class Context {
 
     //构造函数，你要使用哪个妙计？
     private Istrategy straegy;
-    public Context(Istrategy _strategy){
-        this.straegy  = _strategy;
+
+    public Context(Istrategy _strategy) {
+        this.straegy = _strategy;
     }
+
     //使用计谋，看我出招
-    public void operate(){
+    public void operate() {
         this.straegy.operate();
     }
 }

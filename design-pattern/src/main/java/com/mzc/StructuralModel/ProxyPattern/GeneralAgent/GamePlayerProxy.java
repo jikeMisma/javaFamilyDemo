@@ -17,15 +17,16 @@ package com.mzc.StructuralModel.ProxyPattern.GeneralAgent;
  **/
 public class GamePlayerProxy implements IGamePlayer {
     private IGamePlayer gamePlayer = null;
+
     //通过构造函数传递对于谁进行代练
-    public GamePlayerProxy(IGamePlayer _gameplayer){
+    public GamePlayerProxy(IGamePlayer _gameplayer) {
         this.gamePlayer = _gameplayer;
     }
 
     //代练登录
     @Override
     public void login(String user, String passward) {
-        this.gamePlayer.login(user,passward);
+        this.gamePlayer.login(user, passward);
     }
 
     //代练杀怪

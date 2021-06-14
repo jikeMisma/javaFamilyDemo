@@ -18,8 +18,10 @@ package com.mzc.StructuralModel.ProxyPattern.DynamizAgent;
 public interface IGamePlayer {
     //登录游戏
     public void login(String user, String passward);
+
     //杀怪，网络游戏的主要特色
     public void killBoss();
+
     //升级
     public void upload();
 }
