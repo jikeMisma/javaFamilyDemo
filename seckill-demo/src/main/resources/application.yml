@@ -1,0 +1,55 @@
+
+spring:
+  #thymeleaf配置
+  thymeleaf:
+    #是否开启缓存
+    cache: false
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://114.215.198.143:3306/seckill?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: mzc277171
+    hikari:
+      pool-name: DateHikariDp
+      #最小池数量
+      minimum-idle: 5
+      #超时时间
+      idle-timeout: 180000
+      #最大池数量
+      maximum-pool-size: 10
+      #自动提交
+      auto-commit: true
+      #最大存活时间
+      max-lifetime: 180000
+      #连接超时时间
+      connection-timeout: 3000
+      #连接测试SQL
+      connection-test-query: SELECT 1
+  #redis配置
+  redis:
+    #服务器地址
+    host: 114.215.198.143
+    port: 6379
+    database: 0
+    timeout: 10000ms
+    lettuce:
+      pool:
+        #最大连接数
+        max-active: 8
+        #最大连接阻塞等待时间
+        max-wait: 100000ms
+        #最大空闲连接
+        max-idle: 200
+        #最小空闲连
+        min-idle: 5
+    password: mzc277171
+
+#mybatis-plus配置
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*Mapper.xml
+  type-aliases-package: com.mzc.pojo
+
+
+logging:
+  level:
+    com.mzc.mapper: debug

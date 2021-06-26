@@ -16,7 +16,6 @@ import javax.annotation.Resource;
 @Component
 public class KafkaProducer {
 
-
     @Resource
     private KafkaTemplate<String,String> kafkaTemplate;
 
