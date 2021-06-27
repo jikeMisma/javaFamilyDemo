@@ -10,11 +10,11 @@ import org.springframework.web.bind.annotation.RestController;
  * </p>
  *
  * @author jikemisma
- * @since 2021-06-24
+ * @since 2021-06-27
  */
 @RestController
-@RequestMapping("/user/user")
-public class TUserController {
+@RequestMapping("/seckill/seckillOrder")
+public class TSeckillOrderController {
 
 }
 
