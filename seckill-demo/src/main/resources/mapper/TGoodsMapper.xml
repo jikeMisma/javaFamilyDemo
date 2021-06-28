@@ -6,8 +6,17 @@
     <select id="findGoodVo" resultType="com.mzc.vo.GoodsVo">
         select
           *
-        from t_goods g
-          left join t_seckill_goods as sg on g.id = sg.goods_id;
+            from t_goods g
+              left join t_seckill_goods as sg on g.id = sg.goods_id;
+    </select>
+
+    <!--获取商品详情-->
+    <select id="findGoodsByGoodsId" resultType="com.mzc.vo.GoodsVo">
+        select
+          *
+            from t_goods g
+              left join t_seckill_goods as sg on g.id = sg.goods_id
+            where g.id = #{goodsId};
     </select>
 
 </mapper>

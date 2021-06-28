@@ -19,4 +19,6 @@ public interface TGoodsService extends IService<TGoods> {
 
     //获取商品列表
     List<GoodsVo> findGoodsVo();
+
+    GoodsVo findGoodsVoByGoodsId(Long goodsId);
 }

@@ -18,4 +18,6 @@ public interface TGoodsMapper extends BaseMapper<TGoods> {
 
     //获取商品对象
     List<GoodsVo> findGoodVo();
+
+    GoodsVo findGoodsByGoodsId(Long goodsId);
 }
