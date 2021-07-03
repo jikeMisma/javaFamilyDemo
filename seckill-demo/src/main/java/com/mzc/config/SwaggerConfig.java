@@ -1,4 +1,4 @@
-package com.mzc.cnfig;
+package com.mzc.config;
 
 import com.google.common.base.Predicates;
 import springfox.documentation.service.Contact;

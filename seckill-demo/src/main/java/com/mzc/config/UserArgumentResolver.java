@@ -1,4 +1,4 @@
-package com.mzc.cnfig;
+package com.mzc.config;
 
 import com.mzc.pojo.TUser;
 import com.mzc.service.TUserService;

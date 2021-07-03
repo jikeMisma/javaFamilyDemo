@@ -4,18 +4,16 @@ import com.mzc.pojo.TUser;
 import com.mzc.service.TGoodsService;
 import com.mzc.service.TUserService;
 import com.mzc.vo.GoodsVo;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.util.StringUtils;
-import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.util.Date;
+
 
 /**
  * @author MaZhiCheng
@@ -23,6 +21,8 @@ import java.util.Date;
  * @motto 腹有诗书气自华
  * @博客地址 https://blog.csdn.net/mzc_love
  */
+
+@Api(description = "商品部分接口")
 @Controller
 @RequestMapping("/goods")
 public class GoodsController {
@@ -39,6 +39,7 @@ public class GoodsController {
      * @param model
      * @return
      */
+    @ApiOperation(value = "跳转到商品列表页面")
     @RequestMapping("toList")
     public String toList(Model model,TUser user){
 
@@ -57,6 +58,7 @@ public class GoodsController {
         return "goodsList";
     }
 
+    @ApiOperation(value = "查询商品详情")
     @RequestMapping("toDetail/{goodsId}")
     public String toDetail(Model model, TUser user, @PathVariable Long goodsId){
 

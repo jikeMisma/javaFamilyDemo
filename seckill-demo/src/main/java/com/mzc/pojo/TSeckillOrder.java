@@ -37,5 +37,7 @@ public class TSeckillOrder implements Serializable {
      */
     private Long orderId;
 
+    private Long goodsId;
+
 
 }

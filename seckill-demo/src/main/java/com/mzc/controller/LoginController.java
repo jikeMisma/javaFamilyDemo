@@ -43,6 +43,8 @@ public class LoginController {
      * @param loginVo
      * @return
      */
+
+    @ApiOperation(value = "登录页面")
     @RequestMapping("doLogin")
     @ResponseBody
     public RespBean doLogin(@Valid LoginVo loginVo, HttpServletRequest request, HttpServletResponse response) {
