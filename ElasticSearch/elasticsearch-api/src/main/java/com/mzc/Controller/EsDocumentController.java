@@ -3,6 +3,7 @@ package com.mzc.Controller;
 import com.alibaba.fastjson.JSON;
 import com.mzc.user.User;
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.elasticsearch.action.bulk.BulkRequest;
 import org.elasticsearch.action.bulk.BulkResponse;
 import org.elasticsearch.action.delete.DeleteRequest;
@@ -11,13 +12,21 @@ import org.elasticsearch.action.get.GetRequest;
 import org.elasticsearch.action.get.GetResponse;
 import org.elasticsearch.action.index.IndexRequest;
 import org.elasticsearch.action.index.IndexResponse;
+import org.elasticsearch.action.search.SearchRequest;
+import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.action.update.UpdateRequest;
 import org.elasticsearch.action.update.UpdateResponse;
 import org.elasticsearch.client.RequestOptions;
 import org.elasticsearch.client.RestHighLevelClient;
 import org.elasticsearch.client.indices.CreateIndexRequest;
 import org.elasticsearch.client.indices.CreateIndexResponse;
+import org.elasticsearch.common.unit.TimeValue;
 import org.elasticsearch.common.xcontent.XContentType;
+import org.elasticsearch.index.query.MatchAllQueryBuilder;
+import org.elasticsearch.index.query.QueryBuilders;
+import org.elasticsearch.index.query.TermQueryBuilder;
+import org.elasticsearch.search.SearchHit;
+import org.elasticsearch.search.builder.SearchSourceBuilder;
 import org.elasticsearch.search.fetch.subphase.FetchSourceContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,6 +35,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @author MaZhiCheng
@@ -54,7 +64,7 @@ public class EsDocumentController {
         request.id("1");
         request.timeout("1ms");
         //将我们的数据放入请求
-        IndexRequest source = request.source(JSON.toJSON(user), XContentType.JSON);
+        IndexRequest source = request.source(JSON.toJSONString(user), XContentType.JSON);
         //客户端发送请求,获取响应的结果
         IndexResponse indexResponse = restHighLevelClient.index(source, RequestOptions.DEFAULT);
         System.out.println(indexResponse.toString());
@@ -129,7 +139,7 @@ public class EsDocumentController {
         for (int i = 0; i < userlits.size(); i++) {
             bulkRequest.add(new IndexRequest("java_test")
             .id(""+(i+1))
-            .source(JSON.toJSON(userlits.get(i)),XContentType.JSON)
+            .source(JSON.toJSONString(userlits.get(i)),XContentType.JSON)
             );
         }
         BulkResponse bulkResponse = restHighLevelClient.bulk(bulkRequest, RequestOptions.DEFAULT);
@@ -139,6 +149,36 @@ public class EsDocumentController {
         }else{
             return "批量插入数据失败!";
         }
+    }
+
+
+    //查询操作测试
+    @GetMapping("essearch")
+    @ApiOperation(value = "按条件搜寻")
+    public String esSearch(String name,String value) throws IOException {
+        SearchRequest searchRequest = new SearchRequest("java_test");
+        //构建搜索条件
+        SearchSourceBuilder sourceBuilder = new SearchSourceBuilder();
+
+
+        //构建查询的条件，我们可以使用QueryBuilders实现
+        /*
+        QueryBuilders.termQuery:精确匹配查询
+        QueryBuilders.matchAllQuery:匹配所有
+         */
+        TermQueryBuilder termQueryBuilder = QueryBuilders.termQuery(name, value);
+//        MatchAllQueryBuilder matchAllQueryBuilder = QueryBuilders.matchAllQuery();
+        sourceBuilder.query(termQueryBuilder);
+        sourceBuilder.timeout(new TimeValue(60, TimeUnit.SECONDS));
+        searchRequest.source(sourceBuilder);
+
+        SearchResponse searchResponse = restHighLevelClient.search(searchRequest, RequestOptions.DEFAULT);
+        System.out.println(JSON.toJSONString(searchResponse.getHits()));
+        for (SearchHit documentFields : searchResponse.getHits().getHits()) {
+            System.out.println(documentFields.getSourceAsMap());
+        }
+
+        return JSON.toJSONString(searchResponse.getHits());
     }
 
 
