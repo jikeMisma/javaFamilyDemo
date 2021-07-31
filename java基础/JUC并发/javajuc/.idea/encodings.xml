@@ -1,4 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding" addBOMForNewFiles="with NO BOM" />
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/main/java/com/mzc/add/CountDownLatchDemo.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/mzc/bq/BqTest.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/mzc/bq/SynchronousQueueDemo.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/mzc/dmo01/SaleTicketDemo01.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/mzc/dmo01/SaleTicketDemo02.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/mzc/forkjoin/Test.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/mzc/future/Demo01.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/mzc/pool/Demo01.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/mzc/pool/ThreadPoolDemo.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/mzc/rw/ReadWriteLockDemo.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/mzc/unsafe/ListTest.java" charset="GBK" />
+  </component>
 </project>
